@@ -1,15 +1,13 @@
 <script lang="ts">
-import {defineComponent} from 'vue'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: "Header.vue"
+  name: 'Header.vue'
 })
 </script>
 
 <template>
-<p> header</p>
+  <p>header</p>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
