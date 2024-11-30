@@ -1,21 +1,25 @@
+import facebookIcon from '@/assets/socials/facebook.svg'
+import linkedinIcon from '@/assets/socials/linkedin.svg'
+import twitterIcon from '@/assets/socials/twitter.svg'
+
 export const socialMedia = [
   {
     id: 'socialMedia1',
     name: 'twitter',
     url: '#',
-    icon: '/src/assets/socials/twitter.svg'
+    icon: twitterIcon
   },
   {
     id: 'socialMedia2',
     name: 'facebook',
     url: '#',
-    icon: '/src/assets/socials/facebook.svg'
+    icon: facebookIcon
   },
   {
     id: 'socialMedia3',
     name: 'linkedin',
     url: '#',
-    icon: '/src/assets/socials/linkedin.svg'
+    icon: linkedinIcon
   }
 ]
 
