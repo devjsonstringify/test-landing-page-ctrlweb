@@ -5,6 +5,7 @@ This repository contains my technical assessment submission for ctrlweb's Fronte
 ## 🎯 Assessment Requirements
 
 This project was built according to the following requirements:
+
 - Implementation of a responsive header component
 - Integration of social media links
 - Usage of TypeScript for type safety
@@ -20,6 +21,7 @@ This project was built according to the following requirements:
 ## 💻 Implementation Details
 
 ### Key Features
+
 - Responsive header design
 - Dynamic social media integration
 - Type-safe component implementation

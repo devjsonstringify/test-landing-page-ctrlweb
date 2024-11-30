@@ -14,7 +14,7 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
-    minify: true,
+    minify: true
   },
-  assetsInclude: ['**/*.svg'],
+  assetsInclude: ['**/*.svg']
 })
