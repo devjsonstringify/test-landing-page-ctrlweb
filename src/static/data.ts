@@ -37,7 +37,7 @@ interface NavLink {
 }
 
 
-export const socialMedia : SocialMediaItem = [
+export const socialMedia : SocialMediaItem[] = [
   {
     id: 'socialMedia1',
     name: 'twitter',
@@ -58,7 +58,7 @@ export const socialMedia : SocialMediaItem = [
   }
 ]
 
-export const navLinks: NavLink = [
+export const navLinks: NavLink[] = [
   {
     id: 'navLink1',
     name: 'Home',
