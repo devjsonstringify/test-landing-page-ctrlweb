@@ -4,14 +4,14 @@
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">{{ features.title }}</h2>
         <p class="text-gray-600">
-          {{ features.subtitle.line1 }}<br/>
+          {{ features.subtitle.line1 }}<br />
           {{ features.subtitle.line2 }}
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div v-for="feature in features.features" :key="feature.title" class="text-center p-6">
-          <img :src="feature.icon" :alt="feature.title" class="w-12 h-12 mx-auto mb-4"/>
+          <img :src="feature.icon" :alt="feature.title" class="w-12 h-12 mx-auto mb-4" />
           <h3 class="text-xl font-bold mb-2">
             {{ feature.title }}
             <span v-if="feature.subtitle" class="block">{{ feature.subtitle }}</span>
@@ -24,7 +24,7 @@
     </div>
   </section>
 
- <div class="w-full max-w-4xl mx-auto">
+  <div class="w-full max-w-4xl mx-auto">
     <video
       ref="videoPlayer"
       class="video-js vjs-big-play-centered w-full aspect-video rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
@@ -44,8 +44,8 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from 'vue'
-import {featureContent} from '@/static/data.ts'
+import { defineComponent } from 'vue'
+import { featureContent } from '@/static/data.ts'
 import videoUrl from '../assets/medias/meeting.mp4'
 import posterUrl from '../assets/medias/poster.jpg'
 import 'video.js/dist/video-js.css'
@@ -87,7 +87,7 @@ export default defineComponent({
 .video-js .vjs-big-play-button {
   width: 80px;
   height: 80px;
-  background-color: #2563eb; 
+  background-color: #2563eb;
   border-radius: 50%;
   border: none;
   left: 50%;
@@ -115,25 +115,19 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
 }
+
 .vjs-poster {
   background-size: cover;
- }
+  border-radius: 2rem;
+}
 
-/* Add border radius and shadow to video container */
 .video-js {
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: 0 8px 30px rgb(0 0 0 / 0.12);
 }
 
-/* Make sure the video content also respects the border radius */
 .video-js .vjs-tech {
-  border-radius: 2rem;
-}
-
-/* Ensure poster image also has border radius */
-.vjs-poster {
-  background-size: cover;
   border-radius: 2rem;
 }
 </style>
