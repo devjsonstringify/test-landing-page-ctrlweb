@@ -41,6 +41,9 @@
       <source :src="videoUrl" :type="videoType" />
     </video>
   </div>
+
+  <FasterWayToOrganize />
+  <LightningFast />
 </template>
 
 <script lang="ts">
@@ -49,9 +52,15 @@ import { featureContent } from '@/static/data.ts'
 import videoUrl from '../assets/medias/meeting.mp4'
 import posterUrl from '../assets/medias/poster.jpg'
 import 'video.js/dist/video-js.css'
+import FasterWayToOrganize from './FasterWayToOrganize.vue'
+import LightningFast from './LightningFast.vue'
 
 export default defineComponent({
   name: 'Contents',
+  components: {
+    FasterWayToOrganize,
+    LightningFast
+  },
   data() {
     return {
       features: featureContent,
@@ -129,5 +138,20 @@ export default defineComponent({
 
 .video-js .vjs-tech {
   border-radius: 2rem;
+}
+
+/* Fix play button icon */
+.vjs-icon-play:before,
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before,
+.video-js .vjs-play-control .vjs-icon-placeholder:before {
+  content: "\25B6" !important; /* Unicode play triangle */
+}
+
+/* Optional: Adjust play button icon position */
+.video-js .vjs-big-play-button .vjs-icon-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
 }
 </style>

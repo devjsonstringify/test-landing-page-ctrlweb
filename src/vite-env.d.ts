@@ -17,6 +17,11 @@ declare module '*.jpg' {
 }
 
 declare module '*.png' {
-  const src: string
-  export default src
+  const value: string
+  export default value
+}
+
+declare module '*.svg' {
+  const content: string
+  export default content
 }
