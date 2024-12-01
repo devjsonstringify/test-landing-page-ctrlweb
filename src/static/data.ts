@@ -177,3 +177,57 @@ export const partners: Partners[] = [
     icon: amazon
   }
 ]
+
+interface Pricing {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  isRecommended: boolean;
+  features: string[];
+}
+
+export const pricing: Pricing[] = [
+  {
+    id: 'pricing1',
+    title: 'Free',
+    description: 'Organize across all apps by hand',
+    price: 0,
+    isRecommended: false,
+    features: [
+      'Unlimited cloud storage',
+      'Email support',
+      'Google Calendar',
+      'Google Drive',
+      'AWS S3'
+    ]
+  },
+  {
+    id: 'pricing2',
+    title: 'Standard',
+    description: 'Organize across all apps by hand',
+    price: 10,
+    isRecommended: true,
+    features: [
+      'Unlimited cloud storage',
+      'Email support',
+      'Google Calendar',
+      'Google Drive',
+      'AWS S3'
+    ]
+  },
+  {
+    id: 'pricing3',
+    title: 'Business',
+    description: 'Organize across all apps by hand',
+    price: 12,
+    isRecommended: false,
+    features: [
+      'Unlimited cloud storage',
+      'Email support',
+      'Google Calendar',
+      'Google Drive',
+      'AWS S3'
+    ]
+  }
+]
