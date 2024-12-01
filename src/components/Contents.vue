@@ -23,22 +23,117 @@
       </div>
     </div>
   </section>
+
+ <div class="w-full max-w-4xl mx-auto">
+    <video
+      ref="videoPlayer"
+      class="video-js vjs-big-play-centered w-full aspect-video rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+      controls
+      preload="auto"
+      :poster="posterUrl"
+      data-setup='{
+        "fluid": true,
+        "controls": true,
+        "playbackRates": [0.5, 1, 1.5, 2],
+        "userActive": true
+      }'
+    >
+      <source :src="videoUrl" :type="videoType" />
+    </video>
+  </div>
 </template>
 
 <script lang="ts">
 import {defineComponent} from 'vue'
 import {featureContent} from '@/static/data.ts'
+import videoUrl from '../assets/medias/meeting.mp4'
+import posterUrl from '../assets/medias/poster.jpg'
+import 'video.js/dist/video-js.css'
 
 export default defineComponent({
   name: 'Contents',
   data() {
     return {
-      features: featureContent
+      features: featureContent,
+      videoUrl,
+      videoType: 'video/mp4',
+      posterUrl
     }
   }
 })
 </script>
 
-<style scoped>
-/* Add any additional custom styles here */
+<style>
+.video-js .vjs-control-bar {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.video-js.vjs-playing.vjs-user-inactive .vjs-control-bar {
+  visibility: hidden;
+  opacity: 0;
+  transition-delay: 0.3s;
+}
+
+.video-js.vjs-playing.vjs-user-active .vjs-control-bar {
+  visibility: visible;
+  opacity: 1;
+}
+
+.video-js .vjs-big-play-button {
+  width: 80px;
+  height: 80px;
+  background-color: #2563eb; 
+  border-radius: 50%;
+  border: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+  font-size: 40px;
+  line-height: 80px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-js:hover .vjs-big-play-button {
+  background-color: #1d4ed8;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.vjs-icon-placeholder {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.vjs-poster {
+  background-size: cover;
+ }
+
+/* Add border radius and shadow to video container */
+.video-js {
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgb(0 0 0 / 0.12);
+}
+
+/* Make sure the video content also respects the border radius */
+.video-js .vjs-tech {
+  border-radius: 2rem;
+}
+
+/* Ensure poster image also has border radius */
+.vjs-poster {
+  background-size: cover;
+  border-radius: 2rem;
+}
 </style>

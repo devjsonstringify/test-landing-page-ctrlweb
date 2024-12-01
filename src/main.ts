@@ -1,5 +1,8 @@
+import VueVideoPlayer from '@videojs-player/vue'
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import './style.css'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.use(VueVideoPlayer)
+app.mount('#app')
