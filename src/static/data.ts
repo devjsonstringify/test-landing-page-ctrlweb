@@ -6,6 +6,12 @@ import feature_1 from '@/assets/features/feature_1.svg'
 import feature_2 from '@/assets/features/feature_2.svg'
 import feature_3 from '@/assets/features/feature_3.svg'
 
+import google from '@/assets/partners/google.svg'
+import amazon from '@/assets/partners/amazon.svg'
+import microsoft from '@/assets/partners/microsoft.svg'
+import uber from '@/assets/partners/uber.svg'
+import dropbox from '@/assets/partners/dropbox.svg'
+
 interface Feature {
   icon: string
   title: string
@@ -36,6 +42,9 @@ interface NavLink {
   url: string;
 }
 
+interface Partners extends SocialMediaItem {
+  name: string;
+}
 
 export const socialMedia : SocialMediaItem[] = [
   {
@@ -116,3 +125,55 @@ export const featureContent: FeatureContent = {
     }
   ]
 }
+
+
+export const partners: Partners[] = [
+  {
+    id: 'partner1',
+    name: 'Google',
+    url: '#',
+    icon: google
+  },
+  {
+    id: 'partner2',
+    name: 'Amazon',
+    url: '#',
+    icon: amazon
+  },
+  {
+    id: 'partner3',
+    name: 'Microsoft',
+    url: '#',
+    icon: microsoft
+  },
+  {
+    id: 'partner4',
+    name: 'Uber',
+    url: '#',
+    icon: uber
+  },
+  {
+    id: 'partner5',
+    name: 'Dropbox',
+    url: '#',
+    icon: dropbox
+  },
+  {
+    id: 'partner6',
+    name: 'Google',
+    url: '#',
+    icon: google
+  },
+  {
+    id: 'partner7',
+    name: 'Uber',
+    url: '#',
+    icon: uber
+  },
+  {
+    id: 'partner8',
+    name: 'Amazon',
+    url: '#',
+    icon: amazon
+  }
+]

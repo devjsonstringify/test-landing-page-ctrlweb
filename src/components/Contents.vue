@@ -59,7 +59,7 @@ export default defineComponent({
   name: 'Contents',
   components: {
     FasterWayToOrganize,
-    LightningFast
+    LightningFast,
   },
   data() {
     return {
