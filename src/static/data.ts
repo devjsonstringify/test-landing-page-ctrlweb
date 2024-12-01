@@ -6,11 +6,11 @@ import feature_1 from '@/assets/features/feature_1.svg'
 import feature_2 from '@/assets/features/feature_2.svg'
 import feature_3 from '@/assets/features/feature_3.svg'
 
-import google from '@/assets/partners/google.svg'
 import amazon from '@/assets/partners/amazon.svg'
+import dropbox from '@/assets/partners/dropbox.svg'
+import google from '@/assets/partners/google.svg'
 import microsoft from '@/assets/partners/microsoft.svg'
 import uber from '@/assets/partners/uber.svg'
-import dropbox from '@/assets/partners/dropbox.svg'
 
 interface Feature {
   icon: string
@@ -42,7 +42,7 @@ interface NavLink {
   url: string;
 }
 
-interface Partners extends SocialMediaItem {
+interface Partners extends Omit<SocialMediaItem, 'name'> {
   name: string;
 }
 
