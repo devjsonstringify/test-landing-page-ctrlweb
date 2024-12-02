@@ -19,7 +19,9 @@ import uber from '@/assets/partners/uber.svg'
 import mapIcon from '@/assets/contact-us/mapIcon.svg'
 import phoneIcon from '@/assets/contact-us/phoneIcon.svg'
 import emailIcon from '@/assets/contact-us/emailIcon.svg'
-import contactUs from "../components/ContactUs.vue";
+
+import mapIconWhite from '@/assets/contact-us/white/mapIcon.svg'
+import phoneIconWhite from '@/assets/contact-us/white/phoneIcon.svg'
 
 interface Feature {
   icon: string
@@ -289,3 +291,74 @@ export const contactUs: IContactUs = [
     url: 'mailto:willie.jennings@example.com'
   }
 ]
+
+export const contactUsFooter: IContactUs = [
+  {
+    id: 'contactUs1Footer',
+    title: '7480 MockingBird Hill',
+    icon: mapIconWhite,
+  }, {
+    id: 'contact2Footer',
+    title: '(239) 555-0108',
+    icon: phoneIconWhite,
+  }
+]
+
+export const tomothys: NavLink[] = [
+  {
+    id: 'tomothy1',
+    name: 'Eleanor Edwards',
+    url: '#',
+  },
+  {
+    id: 'tomothy2',
+    name: 'Ted Robertson',
+    url: '#',
+  },
+  {
+    id: 'tomothy3',
+    name: 'Ann Russell',
+    url: '#',
+  },
+  {
+    id: 'tomothy4',
+    name: 'Jennie Mckinney',
+    url: '#',
+  },
+  {
+    id: 'tomothy5',
+    name: 'Gloria Richards',
+    url: '#',
+  }
+]
+
+export const janeBlack: NavLink[] = [
+  {
+    id: 'janeBlack1',
+    name: 'Phillip Jones',
+    url: '#',
+  },
+  {
+    id: 'janeBlack2',
+    name: 'Product',
+    url: '#',
+  },
+  {
+    id: 'janeBlack3',
+    name: 'Colleen Russell',
+    url: '#',
+  },
+  {
+    id: 'janeBlack4',
+    name: 'Marvin Hawkins',
+    url: '#',
+  },
+  {
+    id: 'janeBlack5',
+    name: 'Bruce Simmons',
+    url: '#',
+  }
+]
+
+
+
