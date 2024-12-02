@@ -1,6 +1,10 @@
-import facebookIcon from '@/assets/socials/facebook.svg'
-import linkedinIcon from '@/assets/socials/linkedin.svg'
-import twitterIcon from '@/assets/socials/twitter.svg'
+import facebookIconWhite from '@/assets/socials/facebook.svg'
+import linkedinIconWhite from '@/assets/socials/linkedin.svg'
+import twitterIconWhite from '@/assets/socials/twitter.svg'
+
+import facebookIconBlue from '@/assets/socials/blue/facebook.svg'
+import linkedinIconBlue from '@/assets/socials/blue/linkedin.svg'
+import twitterIconBlue from '@/assets/socials/blue/twitter.svg'
 
 import feature_1 from '@/assets/features/feature_1.svg'
 import feature_2 from '@/assets/features/feature_2.svg'
@@ -11,6 +15,11 @@ import dropbox from '@/assets/partners/dropbox.svg'
 import google from '@/assets/partners/google.svg'
 import microsoft from '@/assets/partners/microsoft.svg'
 import uber from '@/assets/partners/uber.svg'
+
+import mapIcon from '@/assets/contact-us/mapIcon.svg'
+import phoneIcon from '@/assets/contact-us/phoneIcon.svg'
+import emailIcon from '@/assets/contact-us/emailIcon.svg'
+import contactUs from "../components/ContactUs.vue";
 
 interface Feature {
   icon: string
@@ -46,24 +55,45 @@ interface Partners extends Omit<SocialMediaItem, 'name'> {
   name: string;
 }
 
-export const socialMedia : SocialMediaItem[] = [
+export const socialMediaWhite : SocialMediaItem[] = [
   {
     id: 'socialMedia1',
     name: 'twitter',
     url: '#',
-    icon: twitterIcon
+    icon: twitterIconWhite
   },
   {
     id: 'socialMedia2',
     name: 'facebook',
     url: '#',
-    icon: facebookIcon
+    icon: facebookIconWhite
   },
   {
     id: 'socialMedia3',
     name: 'linkedin',
     url: '#',
-    icon: linkedinIcon
+    icon: linkedinIconWhite
+  }
+]
+
+export const socialMediaBlue : SocialMediaItem[] = [
+  {
+    id: 'socialMedia_blue_1',
+    name: 'twitter',
+    url: '#',
+    icon: twitterIconBlue
+  },
+  {
+    id: 'socialMedia_blue_2',
+    name: 'facebook',
+    url: '#',
+    icon: facebookIconBlue
+  },
+  {
+    id: 'socialMedia_blue_3',
+    name: 'linkedin',
+    url: '#',
+    icon: linkedinIconBlue
   }
 ]
 
@@ -229,5 +259,33 @@ export const pricing: Pricing[] = [
       'Google Drive',
       'AWS S3'
     ]
+  }
+]
+
+interface IContactUs {
+    id: string;
+    title: string;
+    image: string;
+    url?: string;
+}
+
+export const contactUs: IContactUs = [
+  {
+    id: 'contact1',
+    title: '6386 Spring St undefined Anchorage, Georgia 12473 United States',
+    url: 'https://maps.app.goo.gl/bhARqcUcegeKLJC59',
+    icon: mapIcon,
+  },
+  {
+    id: 'contact2',
+    title: '(843) 555-0130',
+    icon: phoneIcon,
+    url: 'tel:+8435550130'
+  },
+  {
+    id: 'contact3',
+    title: 'willie.jennings@example.com',
+    icon: emailIcon,
+    url: 'mailto:willie.jennings@example.com'
   }
 ]

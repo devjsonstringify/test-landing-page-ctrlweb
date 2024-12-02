@@ -1,13 +1,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { socialMedia, navLinks } from '@/static/data.ts'
+import { socialMediaWhite, navLinks } from '@/static/data.ts'
 
 export default defineComponent({
   name: 'Header.vue',
 
   data() {
     return {
-      socials: socialMedia,
+      socials: socialMediaWhite,
       navigation: navLinks
     }
   }
