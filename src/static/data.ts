@@ -267,7 +267,7 @@ export const pricing: Pricing[] = [
 interface IContactUs {
     id: string;
     title: string;
-    image: string;
+    icon: string;
     url?: string;
 }
 

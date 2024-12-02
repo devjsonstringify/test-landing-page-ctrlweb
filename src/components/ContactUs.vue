@@ -56,7 +56,7 @@
         <div class="h-72 rounded-lg overflow-hidden">
           <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987641.9219421695!2d-151.9344637529324!3d61.08721740544133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x56c8917604b33f41%3A0x257dba5aa78468e3!2sAnchorage%2C%20Alaska%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sca!4v1733151016226!5m2!1sfr!2sca"
-              width="600" height="450" style="border:0; border-radius: 0.5rem;" allowfullscreen="" loading="lazy"
+              width="600" height="450" style="border:0; border-radius: 0.5rem;" allowfullscreen="true" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
@@ -81,7 +81,7 @@ export default defineComponent({
   },
   data() {
     return {
-      contactUs: contactUs,
+      contactUs,
       form: {
         name: '',
         email: '',
