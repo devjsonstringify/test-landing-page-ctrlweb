@@ -1,11 +1,3 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'Jumbotron.vue'
-})
-</script>
-
 <template>
   <div class="relative h-screen">
     <div class="absolute inset-0">
@@ -29,11 +21,21 @@ export default defineComponent({
         for freelancers
       </p>
 
-      <button class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-[100px]">
-        Try For Free
-      </button>
+      <Button />
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import Button from './Button.vue'
+
+export default defineComponent({
+  name: 'Jumbotron',
+  components: {
+    Button
+  }
+})
+</script>
 
 <style scoped></style>

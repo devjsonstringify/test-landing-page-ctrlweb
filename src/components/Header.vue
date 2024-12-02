@@ -3,7 +3,7 @@ import { defineComponent } from 'vue'
 import { socialMediaWhite, navLinks } from '@/static/data.ts'
 
 export default defineComponent({
-  name: 'Header.vue',
+  name: 'Header',
 
   data() {
     return {
