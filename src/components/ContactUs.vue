@@ -41,7 +41,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div v-for="contact in contactUs" :key="contact.id" class="flex flex-col items-center text-center">
             <div class="mb-4">
-              <img :src="contact.icon" :alt="contact.name" class="w-6 h-6 mx-auto mb-2"/>
+              <img :src="contact.icon" :alt="contact.title" class="w-6 h-6 mx-auto mb-2"/>
               <a
                   class="text-gray-600 hover:text-blue-500 transition-colors text-sm"
                   :href="contact.url"

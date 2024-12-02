@@ -11,7 +11,7 @@
 
         <div>
           <h3 class="text-white font-medium text-xl mb-5">Tomothy</h3>
-          <ul v-for="tomothy in tomothys" :key="tomothys.id" class="space-y-3">
+          <ul v-for="tomothy in tomothys" :key="tomothy.id" class="space-y-3">
             <li class="my-3"><a :href="tomothy.url" class="hover:text-white transition">{{ tomothy.name }}</a></li>
           </ul>
         </div>
