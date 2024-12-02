@@ -271,7 +271,7 @@ interface IContactUs {
     url?: string;
 }
 
-export const contactUs: IContactUs = [
+export const contactUs: IContactUs[] = [
   {
     id: 'contact1',
     title: '6386 Spring St undefined Anchorage, Georgia 12473 United States',
@@ -292,7 +292,7 @@ export const contactUs: IContactUs = [
   }
 ]
 
-export const contactUsFooter: IContactUs = [
+export const contactUsFooter: IContactUs[] = [
   {
     id: 'contactUs1Footer',
     title: '7480 MockingBird Hill',
