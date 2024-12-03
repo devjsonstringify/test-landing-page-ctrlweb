@@ -6,7 +6,6 @@
       variantClasses,
       { 'opacity-50 cursor-not-allowed': disabled }
     ]"
-    :style="$attrs.style"
   >
     {{ description }}
   </button>
