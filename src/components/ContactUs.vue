@@ -29,7 +29,7 @@
             rows="6"
             class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-y"
           ></textarea>
-          <Button type="submit" description="Send" override-min-width="true" style="width: 145px" />
+          <Button type="submit" description="Send" override-min-width="true" />
         </form>
       </div>
 
