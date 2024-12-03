@@ -4,8 +4,10 @@
       !overrideMinWidth && 'min-w-[236px]',
       'min-h-[50px] rounded-[100px] font-bold transition-colors text-center',
       variantClasses,
+      $attrs.class,
       { 'opacity-50 cursor-not-allowed': disabled }
     ]"
+    v-bind="$attrs"
   >
     {{ description }}
   </button>
@@ -16,6 +18,7 @@ import { defineComponent, computed } from 'vue'
 
 export default defineComponent({
   name: 'Button',
+  inheritAttrs: false,
   props: {
     description: {
       type: String,
@@ -26,7 +29,7 @@ export default defineComponent({
       type: String,
       required: false,
       default: 'primary',
-      validator: (value: string) => ['primary', 'secondary', 'outline'].includes(value)
+      validator: (value: string) => ['primary', 'secondary', 'outline', 'default'].includes(value)
     },
     disabled: {
       type: Boolean,

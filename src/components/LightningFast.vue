@@ -32,7 +32,12 @@
                 class="flex-1 px-6 py-3 rounded-lg bg-gray-100 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
-              <Button type="submit" description="Subscribe" :override-min-width="true" />
+              <Button
+                type="submit"
+                description="Subscribe"
+                :override-min-width="true"
+                class="min-w-[145px]"
+              />
             </form>
           </div>
         </div>

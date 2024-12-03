@@ -39,7 +39,7 @@
     <Button
       :variant="isRecommended ? 'default' : 'primary'"
       description="Order Now"
-      style="font-weight: normal"
+      class="font-normal"
     />
   </div>
 </template>
