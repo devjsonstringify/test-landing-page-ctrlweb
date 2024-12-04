@@ -1,11 +1,14 @@
 <template>
-  <section class="py-20">
+  <section class="py-20 max-w-[1210px] mx-auto px-[72px] mt-14">
     <div class="container mx-auto px-4">
       <div class="flex flex-col md:flex-row items-center justify-between gap-12">
         <!-- Left Content -->
         <div class="w-full md:w-1/2 space-y-6">
-          <h2 class="text-5xl font-bold text-gray-900">Fastest way to organize</h2>
-          <p class="text-xl text-gray-600 max-w-lg">
+          <h2 class="text-2xl font-medium text-gray-900 font-sans">
+            Fastest way to <br />
+            organize
+          </h2>
+          <p class="text-xl text-gray-600 max-w-lg mb-2">
             Most calendars are designed for teams. Slate is designed for freelancers
           </p>
           <Button />

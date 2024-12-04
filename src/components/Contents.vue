@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20">
+  <section class="py-20 max-w-[1210px] mx-auto px-[72px]">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">{{ features.title }}</h2>
@@ -24,22 +24,24 @@
     </div>
   </section>
 
-  <div class="w-full max-w-4xl mx-auto">
-    <video
-      ref="videoPlayer"
-      class="video-js vjs-big-play-centered w-full aspect-video rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
-      controls
-      preload="auto"
-      :poster="posterUrl"
-      data-setup='{
+  <div class="w-full">
+    <div class="max-w-[1210px] mx-auto px-[72px]">
+      <video
+        ref="videoPlayer"
+        class="video-js vjs-big-play-centered w-full aspect-video rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+        controls
+        preload="auto"
+        :poster="posterUrl"
+        data-setup='{
         "fluid": true,
         "controls": true,
         "playbackRates": [0.5, 1, 1.5, 2],
         "userActive": true
       }'
-    >
-      <source :src="videoUrl" :type="videoType" />
-    </video>
+      >
+        <source :src="videoUrl" :type="videoType" />
+      </video>
+    </div>
   </div>
 
   <FasterWayToOrganize />
@@ -59,7 +61,7 @@ export default defineComponent({
   name: 'Contents',
   components: {
     FasterWayToOrganize,
-    LightningFast,
+    LightningFast
   },
   data() {
     return {
@@ -74,12 +76,7 @@ export default defineComponent({
 
 <style>
 .video-js .vjs-control-bar {
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0.3s ease, opacity 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  display: none;
 }
 
 .video-js.vjs-playing.vjs-user-inactive .vjs-control-bar {
@@ -127,7 +124,7 @@ export default defineComponent({
 
 .vjs-poster {
   background-size: cover;
-  border-radius: 2rem;
+  background-color: #ffffff;
 }
 
 .video-js {
@@ -144,7 +141,7 @@ export default defineComponent({
 .vjs-icon-play:before,
 .video-js .vjs-big-play-button .vjs-icon-placeholder:before,
 .video-js .vjs-play-control .vjs-icon-placeholder:before {
-  content: "\25B6" !important; /* Unicode play triangle */
+  content: '\25B6' !important; /* Unicode play triangle */
 }
 
 /* Optional: Adjust play button icon position */

@@ -2,7 +2,21 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      sans: ['Graphik', 'sans-serif']
+    },
     extend: {
+      fontWeight: {
+        thin: '100',
+        extralight: '200',
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        black: '900',
+        super: '950'
+      },
       colors: {
         primary: {
           DEFAULT: '#2091F9',
@@ -15,7 +29,7 @@ export default {
           600: '#0C7AD8',
           700: '#0962B0',
           800: '#064A88',
-          900: '#043260',
+          900: '#043260'
         },
         secondary: {
           DEFAULT: '#252B42',
@@ -28,9 +42,9 @@ export default {
           600: '#1E2335',
           700: '#171B28',
           800: '#10131B',
-          900: '#090A0E',
-        },
-      },
+          900: '#090A0E'
+        }
+      }
     }
   },
   plugins: []

@@ -3,7 +3,6 @@ import tseslintParser from '@typescript-eslint/parser'
 import eslintPluginVue from 'eslint-plugin-vue'
 import * as vueParser from 'vue-eslint-parser'
 
-
 export default [
   {
     files: ['**/*.vue'],

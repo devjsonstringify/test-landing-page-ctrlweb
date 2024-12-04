@@ -16,12 +16,12 @@
         start with Figma
       </h1>
 
-      <p class="text-xl mb-8 text-gray-300">
+      <p class="text-xl mb-8 text-gr-300 font-graphik font-normal">
         Most calendars are designed for teams. Slate is designed<br />
         for freelancers
       </p>
 
-      <Button />
+      <Button class="font-normal" />
     </div>
   </div>
 </template>

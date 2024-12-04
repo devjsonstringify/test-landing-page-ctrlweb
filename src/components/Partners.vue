@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20">
+  <section class="py-20 max-w-[1210px] mx-auto px-[72px]">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">Partners</h2>
@@ -10,13 +10,8 @@
       </div>
 
       <div class="max-w-5xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div
-            v-for="partner in partners"
-            :key="partner.id"
-            class="p-6 border rounded-lg"
-            :href="partner.url"
-          >
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-0">
+          <div v-for="partner in partners" :key="partner.id" class="p-6 border" :href="partner.url">
             <p class="text-sm text-gray-500 mb-4 text-center">{{ partner.name }}</p>
             <p class="flex justify-center">
               <img :src="partner.icon" :alt="partner.name" class="h-8 m-auto" />

@@ -39,25 +39,24 @@ interface FeatureContent {
   features: Feature[]
 }
 
-
 interface SocialMediaItem {
-  id: string;
-  name: 'twitter' | 'facebook' | 'linkedin';
-  url: string;
-  icon: string;
+  id: string
+  name: 'twitter' | 'facebook' | 'linkedin'
+  url: string
+  icon: string
 }
 
 interface NavLink {
-  id: string;
-  name: string;
-  url: string;
+  id: string
+  name: string
+  url: string
 }
 
 interface Partners extends Omit<SocialMediaItem, 'name'> {
-  name: string;
+  name: string
 }
 
-export const socialMediaWhite : SocialMediaItem[] = [
+export const socialMediaWhite: SocialMediaItem[] = [
   {
     id: 'socialMedia1',
     name: 'twitter',
@@ -78,7 +77,7 @@ export const socialMediaWhite : SocialMediaItem[] = [
   }
 ]
 
-export const socialMediaBlue : SocialMediaItem[] = [
+export const socialMediaBlue: SocialMediaItem[] = [
   {
     id: 'socialMedia_blue_1',
     name: 'twitter',
@@ -158,7 +157,6 @@ export const featureContent: FeatureContent = {
   ]
 }
 
-
 export const partners: Partners[] = [
   {
     id: 'partner1',
@@ -211,12 +209,12 @@ export const partners: Partners[] = [
 ]
 
 interface Pricing {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  isRecommended: boolean;
-  features: string[];
+  id: string
+  title: string
+  description: string
+  price: number
+  isRecommended: boolean
+  features: string[]
 }
 
 export const pricing: Pricing[] = [
@@ -265,10 +263,10 @@ export const pricing: Pricing[] = [
 ]
 
 interface IContactUs {
-    id: string;
-    title: string;
-    icon: string;
-    url?: string;
+  id: string
+  title: string
+  icon: string
+  url?: string
 }
 
 export const contactUs: IContactUs[] = [
@@ -276,7 +274,7 @@ export const contactUs: IContactUs[] = [
     id: 'contact1',
     title: '6386 Spring St undefined Anchorage, Georgia 12473 United States',
     url: 'https://maps.app.goo.gl/bhARqcUcegeKLJC59',
-    icon: mapIcon,
+    icon: mapIcon
   },
   {
     id: 'contact2',
@@ -296,11 +294,12 @@ export const contactUsFooter: IContactUs[] = [
   {
     id: 'contactUs1Footer',
     title: '7480 MockingBird Hill',
-    icon: mapIconWhite,
-  }, {
+    icon: mapIconWhite
+  },
+  {
     id: 'contact2Footer',
     title: '(239) 555-0108',
-    icon: phoneIconWhite,
+    icon: phoneIconWhite
   }
 ]
 
@@ -308,27 +307,27 @@ export const tomothys: NavLink[] = [
   {
     id: 'tomothy1',
     name: 'Eleanor Edwards',
-    url: '#',
+    url: '#'
   },
   {
     id: 'tomothy2',
     name: 'Ted Robertson',
-    url: '#',
+    url: '#'
   },
   {
     id: 'tomothy3',
     name: 'Ann Russell',
-    url: '#',
+    url: '#'
   },
   {
     id: 'tomothy4',
     name: 'Jennie Mckinney',
-    url: '#',
+    url: '#'
   },
   {
     id: 'tomothy5',
     name: 'Gloria Richards',
-    url: '#',
+    url: '#'
   }
 ]
 
@@ -336,29 +335,26 @@ export const janeBlack: NavLink[] = [
   {
     id: 'janeBlack1',
     name: 'Phillip Jones',
-    url: '#',
+    url: '#'
   },
   {
     id: 'janeBlack2',
     name: 'Product',
-    url: '#',
+    url: '#'
   },
   {
     id: 'janeBlack3',
     name: 'Colleen Russell',
-    url: '#',
+    url: '#'
   },
   {
     id: 'janeBlack4',
     name: 'Marvin Hawkins',
-    url: '#',
+    url: '#'
   },
   {
     id: 'janeBlack5',
     name: 'Bruce Simmons',
-    url: '#',
+    url: '#'
   }
 ]
-
-
-

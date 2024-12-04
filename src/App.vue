@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="relative w-full">
     <Header />
     <Jumbotron />
     <Contents />
