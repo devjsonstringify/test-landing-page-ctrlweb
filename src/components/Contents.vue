@@ -104,9 +104,9 @@ export default defineComponent({
 
 .video-js .vjs-big-play-button .vjs-icon-placeholder:before {
   font-size: 40px;
-  line-height: 80px;
+  line-height: 65px;
   position: absolute;
-  left: 50%;
+  left: 55%;
   top: 50%;
   transform: translate(-50%, -50%);
 }

@@ -7,6 +7,16 @@
     </p>
 
     <div class="grid md:grid-cols-[35%_65%] gap-8">
+      <div class="block sm:hidden">
+        <ContactsFooter
+          :classes="{
+            parentElement: 'text-left',
+            innerParent: 'flex w-full',
+            socialIcon: 'ml-0 mr-4',
+            description: 'text-left'
+          }"
+        />
+      </div>
       <div
         class="flex flex-col items-start p-[52px] gap-[45px] bg-white border border-[#DDDDDD] shadow-[0px_13px_19px_rgba(0,0,0,0.07)] rounded-[20px] box-border"
       >
@@ -39,7 +49,7 @@
         </form>
       </div>
 
-      <div class="space-y-8">
+      <div class="space-y-8 hidden sm:block">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
             v-for="contact in contactUs"
@@ -59,8 +69,8 @@
           </div>
         </div>
 
-        <div class="h-72 rounded-lg overflow-hidden flex items-center w-full">
-          <div class="max-w-96 my-auto ml-20">
+        <div class="hidden sm:flex h-72 rounded-lg overflow-hidden flex items-center w-full">
+          <div class="max-w-96 my-auto ml-20 sm:ml-0 md:ml-0">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987641.9219421695!2d-151.9344637529324!3d61.08721740544133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x56c8917604b33f41%3A0x257dba5aa78468e3!2sAnchorage%2C%20Alaska%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sca!4v1733151016226!5m2!1sfr!2sca"
               width="500"
@@ -84,6 +94,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import SocialMedia from '@/components/SocialMedia.vue'
+import ContactsFooter from '@/components/ContactsFooter.vue'
 import Button from './Button.vue'
 import { contactUs } from '@/static/data.ts'
 
@@ -91,7 +102,8 @@ export default defineComponent({
   name: 'ContactUs',
   components: {
     SocialMedia,
-    Button
+    Button,
+    ContactsFooter
   },
   data() {
     return {

@@ -1,11 +1,12 @@
 <template>
   <div
+    id="gayx"
     v-bind:class="
       isRecommended
-        ? 'bg-blue-600 rounded-lg py-5 p-8 max-w-[250px] box-border border-[1px]'
-        : 'bg-gray-200 rounded-lg p-8 mx-5 max-w-[250px] box-border'
+        ? 'bg-blue-600 rounded-lg py-5 p-8 sm:p-8 w-full sm:max-w-[250px] box-border border-[1px]'
+        : 'bg-gray-200 rounded-lg p-8 mx-0 sm:mx-5 w-full sm:max-w-[250px] box-border'
     "
-    :style="isRecommended ? 'transform: scale(1.18)' : ''"
+    :style="isRecommended ? 'transform: scale(1.18) sm:scale-0 md:scale-0 lg:scale-0' : ''"
   >
     <h3
       v-bind:class="

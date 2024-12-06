@@ -4,14 +4,14 @@
       <div class="flex flex-col md:flex-row items-center justify-between gap-12">
         <!-- Left Content -->
         <div class="w-full md:w-1/2 space-y-6">
-          <h2 class="text-2xl font-medium text-gray-900 font-sans">
+          <h2 class="text-2xl font-medium text-gray-900 font-sans text-center sm:text-left">
             Fastest way to <br />
             organize
           </h2>
           <p class="text-xl text-gray-600 max-w-lg mb-2">
             Most calendars are designed for teams. Slate is designed for freelancers
           </p>
-          <Button />
+          <Button class="w-full sm:w-0" />
         </div>
 
         <!-- Right Content - Device Mockup -->

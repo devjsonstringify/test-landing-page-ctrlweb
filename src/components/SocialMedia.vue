@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center space-x-4">
+  <div :class="['flex items-center space-x-4', parentElement]">
     <a
       v-for="social in socialMedias"
       :key="social.id"
@@ -20,6 +20,11 @@ export default defineComponent({
     color: {
       type: String,
       default: 'white',
+      required: false
+    },
+    parentElement: {
+      type: String,
+      default: '',
       required: false
     }
   },

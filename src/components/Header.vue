@@ -17,8 +17,17 @@ export default defineComponent({
 <template>
   <header class="fixed top-0 left-0 right-0 bg-black/0 z-50">
     <div class="max-w-[1210px] mx-auto px-[72px] mt-[20px]">
-      <div class="flex justify-between items-center h-[72px] container mx-auto">
-        <nav class="flex items-center">
+      <!--        mobile navigation-->
+      <div class="block sm:hidden">
+        <div>
+          <img src="../assets/figma-land-logo.svg" alt="Figma Land" />
+        </div>
+        <!--        <div>to do: menu</div>-->
+      </div>
+      <div
+        class="hidden sm:block sm:flex sm:justify-between sm:items-center sm:h-[72px] sm:container sm:mx-auto"
+      >
+        <nav class="hidden sm:flex sm:items-center">
           <a
             v-for="item in navigation"
             :key="item.id"
@@ -27,12 +36,12 @@ export default defineComponent({
           >
             {{ item.name }}
           </a>
-          <div class="relative ml-2">
+          <div class="hidden sm:block sm:relative sm:ml-2">
             <img src="../assets/figma-land-logo.svg" alt="Figma Land" />
           </div>
         </nav>
 
-        <div class="flex items-center space-x-4">
+        <div class="hidden sm:flex sm:items-center sm:space-x-4">
           <a
             v-for="social in socials"
             :key="social.id"
