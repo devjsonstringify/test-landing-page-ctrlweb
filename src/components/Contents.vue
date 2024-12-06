@@ -1,11 +1,11 @@
 <template>
-  <section class="py-20 max-w-[1210px] mx-auto px-[72px]">
+  <section class="py-20 max-w-[1210px] mx-auto px-5 sm:px-7 md:px-[72px]">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">{{ features.title }}</h2>
         <p class="text-gray-600">
           {{ features.subtitle.line1 }}<br />
-          {{ features.subtitle.line2 }}
+          <span class="hidden sm:block">{{ features.subtitle.line2 }}</span>
         </p>
       </div>
 
@@ -16,7 +16,7 @@
             {{ feature.title }}
             <span v-if="feature.subtitle" class="block">{{ feature.subtitle }}</span>
           </h3>
-          <p class="text-gray-600">
+          <p class="text-gray-600 mx-auto text-center w-1/2 sm:w-full">
             {{ feature.description }}
           </p>
         </div>
@@ -25,7 +25,7 @@
   </section>
 
   <div class="w-full">
-    <div class="max-w-[1210px] mx-auto px-[72px]">
+    <div class="max-w-[1210px] mx-auto px-5 sm:px-7 md:px-[72px]">
       <video
         ref="videoPlayer"
         class="video-js vjs-big-play-centered w-full aspect-video rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.12)]"

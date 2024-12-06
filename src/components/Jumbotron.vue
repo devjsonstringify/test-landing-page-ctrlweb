@@ -3,7 +3,7 @@
     <div class="absolute inset-0">
       <img
         src="../assets/jumbroton.png"
-        class="w-full h-full object-fit brightness-50"
+        class="w-full h-full object-cover brightness-50"
         alt="Background"
       />
     </div>
@@ -11,13 +11,13 @@
     <div
       class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4"
     >
-      <h1 class="text-5xl font-bold mb-4">
+      <h1 class="text-5xl sm:font-bold mb-4">
         The best products<br />
         start with Figma
       </h1>
 
       <p class="text-xl mb-8 text-gr-300 font-graphik font-normal">
-        Most calendars are designed for teams. Slate is designed<br />
+        Most calendars are designed for teams. Slate is designed<br class="contents sm:block" />
         for freelancers
       </p>
 
