@@ -7,6 +7,7 @@
         </div>
         <button class="text-gray-700" @click="toggleMenu">
           <img v-if="!isMenuOpen" src="../assets/mobile.svg" alt="mobile navigation" />
+          <!--          <img v-else src="../assets/close.svg" alt="close navigation" />-->
         </button>
       </div>
 
@@ -19,6 +20,7 @@
     </nav>
   </header>
 </template>
+
 <script lang="ts">
 import { defineComponent } from 'vue'
 
@@ -32,17 +34,16 @@ export default defineComponent({
   mounted() {
     document.addEventListener('click', this.handleClickOutside)
   },
-  methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen
-    }
+  beforeUnmount() {
+    document.removeEventListener('click', this.handleClickOutside)
   },
   methods: {
-    toggleMenu() {
+    toggleMenu(): void {
       this.isMenuOpen = !this.isMenuOpen
     },
-    handleClickOutside(event) {
-      if (this.isMenuOpen && !this.$el.contains(event.target)) {
+    handleClickOutside(event: MouseEvent): void {
+      const target = event.target as HTMLElement
+      if (this.isMenuOpen && !this.$el.contains(target)) {
         this.isMenuOpen = false
       }
     }
