@@ -3,7 +3,7 @@
     <div class="absolute inset-0">
       <img
         src="../assets/jumbroton.png"
-        class="w-full h-full object-cover brightness-50"
+        class="w-full h-full object-cover sm:object-fit brightness-50"
         alt="Background"
       />
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-3xl text-center py-20 max-w-[1210px] mx-auto px-[72px]">
+  <div class="max-w-3xl text-center py-20 max-w-[1210px] mx-auto px-5 2xl:px-0">
     <h2 class="text-4xl font-medium text-gray-900 mb-12">Testimonials</h2>
     <img src="../assets/testimonial/ibm.svg" alt="IBM logo" class="h-12 mx-auto mb-8" />
     <p class="font-medium sm:font-normal sm:text-2xl text-gray-700 leading-relaxed mb-8">

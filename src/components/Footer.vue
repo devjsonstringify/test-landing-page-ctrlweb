@@ -1,6 +1,6 @@
 <template>
-  <footer class="bg-[#252B42] text-gray-300 py-16">
-    <div class="max-w-[1210px] mx-auto px-[72px] px-4">
+  <footer class="bg-[#252B42] text-gray-300 py-16 px-5 2xl:px-0">
+    <div class="max-w-[1210px] mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <h3 class="text-white font-bold text-xl mb-5 text-center sm:text-left">Pages</h3>
@@ -36,7 +36,7 @@
           </div>
 
           <div class="flex space-x-4 pt-4">
-            <SocialMedia parentElement="justify-center w-full" />
+            <SocialMedia parentElement="justify-center sm:justify-start w-full" />
           </div>
         </div>
       </div>

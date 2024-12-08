@@ -1,5 +1,5 @@
 <template>
-  <header class="shadow">
+  <header class="">
     <nav class="mx-auto max-w-7xl px-4 py-3">
       <div class="md:hidden flex justify-between">
         <div>

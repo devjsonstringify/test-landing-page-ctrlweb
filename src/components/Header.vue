@@ -1,6 +1,6 @@
 <template>
   <header class="fixed top-0 left-0 right-0 bg-black/0 z-50">
-    <div class="max-w-[1210px] mx-auto px-1 sm:px-[72px] mt-1 sm:mt-[20px]">
+    <div class="max-w-[1210px] mx-auto px-1 mt-1 sm:mt-[20px]">
       <!--        mobile navigation-->
       <MobileNavigation />
       <div
@@ -11,7 +11,7 @@
             v-for="item in navigation"
             :key="item.id"
             :href="item.url"
-            class="flex flex-row items-center m-2 w-[63px] h-[48px] text-gray-300 hover:text-white transition-colors"
+            class="flex flex-row items-center m-2 w-[63px] h-[48px] text-gray-300 hover:text-white transition-colors first:ml-0"
           >
             {{ item.name }}
           </a>
