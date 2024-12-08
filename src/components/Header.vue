@@ -1,8 +1,15 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 bg-black/0 z-50">
+  <header
+    :class="{
+      'bg-secondary': isScrolled,
+      'fixed top-0 left-0 right-0 bg-black/0 z-50 transition-all duration-700 ease-out': true
+    }"
+  >
     <div class="max-w-[1210px] mx-auto px-1 mt-1 sm:mt-[20px]">
       <!--        mobile navigation-->
-      <MobileNavigation />
+      <div class="block sm:hidden">
+        <MobileNavigation />
+      </div>
       <div
         class="hidden sm:block sm:flex sm:justify-between sm:items-center sm:h-[72px] sm:container sm:mx-auto"
       >
@@ -49,7 +56,25 @@ export default defineComponent({
   data() {
     return {
       socials: socialMediaWhite,
-      navigation: navLinks
+      navigation: navLinks,
+      isScrolled: false
+    }
+  },
+
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      if (window.scrollY > 20) {
+        this.isScrolled = true
+        return
+      }
+
+      this.isScrolled = false
     }
   }
 })
