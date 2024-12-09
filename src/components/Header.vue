@@ -1,7 +1,7 @@
 <template>
   <header
     :class="{
-      'bg-secondary': isScrolled,
+      'bg-secondary scale-in-bottom': isScrolled,
       'fixed top-0 left-0 right-0 bg-black/0 z-50 transition-all duration-700 ease-out': true
     }"
   >
@@ -44,7 +44,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { socialMediaWhite, navLinks } from '@/static/data.ts'
+import { navLinks, socialMediaWhite } from '@/static/data.ts'
 import MobileNavigation from '@/components/MobileNavigation.vue'
 
 export default defineComponent({
@@ -79,3 +79,46 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+@-webkit-keyframes scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0.5) translateY(20px) rotate(0deg);
+    transform: scale(0.5) translateY(20px) rotate(0deg);
+    opacity: 0;
+  }
+  70% {
+    -webkit-transform: scale(1.1) translateY(-5px) rotate(0deg);
+    transform: scale(1.1) translateY(-5px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0) rotate(0deg);
+    transform: scale(1) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0.5) translateY(20px) rotate(0deg);
+    transform: scale(0.5) translateY(20px) rotate(0deg);
+    opacity: 0;
+  }
+  70% {
+    -webkit-transform: scale(1.1) translateY(-5px) rotate(0deg);
+    transform: scale(1.1) translateY(-5px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0) rotate(0deg);
+    transform: scale(1) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.scale-in-bottom {
+  -webkit-animation: scale-in-bottom 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+  animation: scale-in-bottom 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) both;
+}
+</style>
