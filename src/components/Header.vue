@@ -1,9 +1,10 @@
 <template>
   <header
     :class="{
-      'bg-secondary scale-in-bottom': isScrolled,
+      'drop-shadow-md': isScrolled,
       'fixed top-0 left-0 right-0 bg-black/0 z-50 transition-all duration-700 ease-out': true
     }"
+    :style="{ backgroundColor: `rgba(32, 145, 249, ${currOpacity})` }"
   >
     <div class="max-w-[1210px] mx-auto px-1 mt-1 sm:mt-[20px]">
       <!--        mobile navigation-->
@@ -18,7 +19,11 @@
             v-for="item in navigation"
             :key="item.id"
             :href="item.url"
-            class="flex flex-row items-center m-2 w-[63px] h-[48px] text-gray-300 hover:text-white transition-colors first:ml-0"
+            :class="{
+              'flex flex-row items-center m-2 w-[63px] h-[48px] text-white hover:text-white transition-colors first:ml-0':
+                isScrolled,
+              'flex flex-row items-center m-2 w-[63px] h-[48px] text-gray-300 hover:text-white transition-colors first:ml-0': true
+            }"
           >
             {{ item.name }}
           </a>
@@ -57,7 +62,8 @@ export default defineComponent({
     return {
       socials: socialMediaWhite,
       navigation: navLinks,
-      isScrolled: false
+      isScrolled: false,
+      currOpacity: 0
     }
   },
 
@@ -69,7 +75,9 @@ export default defineComponent({
   },
   methods: {
     handleScroll() {
-      if (window.scrollY > 20) {
+      const scrollY = window.scrollY
+      this.currOpacity = scrollY / 100
+      if (scrollY) {
         this.isScrolled = true
         return
       }
@@ -80,45 +88,4 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
-@-webkit-keyframes scale-in-bottom {
-  0% {
-    -webkit-transform: scale(0.5) translateY(20px) rotate(0deg);
-    transform: scale(0.5) translateY(20px) rotate(0deg);
-    opacity: 0;
-  }
-  70% {
-    -webkit-transform: scale(1.1) translateY(-5px) rotate(0deg);
-    transform: scale(1.1) translateY(-5px) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1) translateY(0) rotate(0deg);
-    transform: scale(1) translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-
-@keyframes scale-in-bottom {
-  0% {
-    -webkit-transform: scale(0.5) translateY(20px) rotate(0deg);
-    transform: scale(0.5) translateY(20px) rotate(0deg);
-    opacity: 0;
-  }
-  70% {
-    -webkit-transform: scale(1.1) translateY(-5px) rotate(0deg);
-    transform: scale(1.1) translateY(-5px) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1) translateY(0) rotate(0deg);
-    transform: scale(1) translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-
-.scale-in-bottom {
-  -webkit-animation: scale-in-bottom 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) both;
-  animation: scale-in-bottom 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) both;
-}
-</style>
+<style scoped></style>
