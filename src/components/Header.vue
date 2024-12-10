@@ -88,7 +88,7 @@ export default defineComponent({
 
       this.isScrolled = false
     },
-    scrollToElement(section, event) {
+    scrollToElement(section: string, event: MouseEvent) {
       event.preventDefault()
 
       const element = document.getElementById(section)
