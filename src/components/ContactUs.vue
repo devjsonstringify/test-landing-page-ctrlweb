@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-[1210px] mx-auto py-20 px-5 2xl:px-0">
+  <div id="Contact" class="max-w-[1210px] mx-auto py-20 px-5 2xl:px-0">
     <h1 class="text-4xl text-center font-medium text-gray-800 mb-4">Contact Us</h1>
     <p class="text-center text-gray-600 mb-12">
       Most calendars are designed for teams.<br />

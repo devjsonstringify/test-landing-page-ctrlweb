@@ -1,5 +1,6 @@
 <template>
   <header
+    id="Home"
     :class="{
       'drop-shadow-md': isScrolled,
       'fixed top-0 left-0 right-0 bg-black/0 z-50 transition-all duration-700 ease-out': true
@@ -24,6 +25,7 @@
                 isScrolled,
               'flex flex-row items-center m-2 w-[63px] h-[48px] text-gray-300 hover:text-white transition-colors first:ml-0': true
             }"
+            @click="scrollToElement(item.name, $event)"
           >
             {{ item.name }}
           </a>
@@ -69,9 +71,11 @@ export default defineComponent({
 
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('click', this.scrollToElement)
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('click', this.scrollToElement)
   },
   methods: {
     handleScroll() {
@@ -83,6 +87,20 @@ export default defineComponent({
       }
 
       this.isScrolled = false
+    },
+    scrollToElement(section, event) {
+      event.preventDefault()
+
+      const element = document.getElementById(section)
+      if (!element) return
+
+      const offset = 50
+      const scrollTop = element.offsetTop - offset
+
+      window.scrollTo({
+        top: scrollTop,
+        behavior: 'smooth'
+      })
     }
   }
 })

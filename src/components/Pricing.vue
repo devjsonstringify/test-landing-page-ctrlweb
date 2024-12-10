@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-gray-900 py-20 px-5 sm:px-5 2xl:px-0">
+  <section id="Pricing" class="bg-gray-900 py-20 px-5 sm:px-5 2xl:px-0">
     <div class="text-center w-full sm:max-w-[1210px] mx-auto pb-10">
       <h2 class="text-4xl font-medium text-gray-100 mb-4">Pricing</h2>
       <p class="text-xl text-gray-400 mb-16 max-w-2xl mx-auto pb-8">

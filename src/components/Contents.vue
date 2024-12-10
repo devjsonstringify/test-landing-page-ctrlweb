@@ -1,5 +1,5 @@
 <template>
-  <section class="py-20 max-w-[1210px] mx-auto md:px-[72px]">
+  <section id="Product" class="py-20 max-w-[1210px] mx-auto md:px-[72px]">
     <div class="container mx-auto px-4">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">{{ features.title }}</h2>
